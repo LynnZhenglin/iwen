@@ -5,9 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IWEN</title>
+    <title>IWEN | Lynn Zhang</title>
     <link rel="shortcut icon" href="../image/icon/favicon.jpg">
     <style>
+        #background0 {
+            width: 100%;
+            height: 0;
+            padding: 0;
+            padding-bottom: 42.7%;
+            position: relative;
+        }
+
+        #font_a {
+            position: absolute;
+            left: 15%;
+            top: 14.5vw;
+            font-size: 2.4vw;
+            font-family: Helvetica Neue;
+            font-weight: 600;
+            color: #8A89FE;
+        }
+
+        #font_b {
+            position: absolute;
+            left: 15.15%;
+            top: 17.5vw;
+            font-size: 1.4vw;
+            font-family: Helvetica Neue;
+            font-weight: 350;
+            color: #8A89FE;
+        }
+
+        #font_c {
+            position: absolute;
+            left: 15.15%;
+            top: 22.5vw;
+            font-size: 1.4vw;
+            font-family: Helvetica Neue;
+            font-weight: 350;
+            text-align: justify;
+            width: 28vw;
+            color: #8A89FE;
+        }
+
+        #font_d {
+            position: absolute;
+            left: 15.15%;
+            top: 26.5vw;
+            font-size: 1.4vw;
+            font-family: Helvetica Neue;
+            font-weight: 350;
+            color: #8A89FE;
+        }
+
         #bk_font {
             position: absolute;
             /* left: 6.59933%; */
@@ -291,8 +341,19 @@
 </head>
 
 <body style="margin: 0;">
-    <div id="background1">
+    <div id="background0">
         <div id="page0" class="page"></div>
+        <div id="back" style="top:0;left:0%;">
+            <img src="./image/main.png" style="width:100%">
+        </div>
+        <div id="font_a">IWEN</div>
+        <div id="font_b">An English Reading-focused App</div>
+        <div id="font_c">Commercial Group Work - User Experience & User Interface Designer</div>
+        <div id="font_d">2021.04 — ongoing</div>
+    </div>
+
+    <div id="background1">
+        <div id="page1" class="page"></div>
         <div id="bk_font">
             Background
         </div>
@@ -305,7 +366,7 @@
     </div>
 
     <div id="background2">
-        <div id="page1" class="page"></div>
+        <div id="page2" class="page"></div>
         <div id="persona_font">
             Persona
         </div>
@@ -318,7 +379,7 @@
     </div>
 
     <div id="background3">
-        <div id="page2" class="page"></div>
+        <div id="page3" class="page"></div>
         <div id="insights_font">
             Insights
         </div>
@@ -331,7 +392,7 @@
     </div>
 
     <div id="background4">
-        <div id="page3" class="page"></div>
+        <div id="page4" class="page"></div>
         <div id="inform_font">
             Information Architecture
         </div>
@@ -346,7 +407,7 @@
     </div>
 
     <div id="background5">
-        <div id="page4" class="page"></div>
+        <div id="page5" class="page"></div>
         <div id="core_font">
             Core Functions
         </div>
@@ -365,7 +426,7 @@
     </div>
 
     <div id="background6">
-        <div id="page5" class="page"></div>
+        <div id="page6" class="page"></div>
         <div id="wire_font">
             Wireframe & Flow
         </div>
@@ -381,7 +442,7 @@
         <div id="homepage2">
             <img src="./image/page4/UI.png" style="width:70vw">
         </div>
-        <div id="page6" class="page"></div>
+        <div id="page7" class="page"></div>
         <div id="user_font">
             User interface Design
         </div>
@@ -389,7 +450,7 @@
     </div>
 
     <div id="background8">
-        <div id="page7" class="page"></div>
+        <div id="page8" class="page"></div>
         <div id="user_font">
             Design Code
         </div>
@@ -406,11 +467,8 @@
 
     <div style="left:4.5vw;top:1.4vw;position: fixed;width: 5vw;height:5vw;">
         <a href="https://lynnzhenglin.github.io/portfolio">
-            <lord-icon
-                src="https://cdn.lordicon.com/jvucoldz.json"
-                trigger="hover"
-                colors="primary:#4a4a4a,secondary:#6B81FD"
-                style="width:3.5vw;height:3.5vw">
+            <lord-icon src="https://cdn.lordicon.com/jvucoldz.json" trigger="hover"
+                colors="primary:#4a4a4a,secondary:#6B81FD" style="width:3.5vw;height:3.5vw">
             </lord-icon>
         </a>
     </div>
@@ -424,6 +482,7 @@
         <li id="pageUlLi5" class="pageUlLi" style="color: #d8d8d8">&nbsp;</li>
         <li id="pageUlLi6" class="pageUlLi" style="color: #d8d8d8">&nbsp;</li>
         <li id="pageUlLi7" class="pageUlLi" style="color: #d8d8d8">&nbsp;</li>
+        <li id="pageUlLi8" class="pageUlLi" style="color: #d8d8d8">&nbsp;</li>
     </ul>
 
     <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
@@ -438,7 +497,7 @@
         function resizeImages() {
             $(function (e) {
                 var screenHeight = document.documentElement.clientHeight;
-                $("#pageUl").css("bottom", screenHeight / 2);
+                $("#pageUl").css("bottom", screenHeight / 8);
 
                 var obj = document.getElementsByClassName("page");
                 dis = [0];
@@ -466,12 +525,14 @@
                     var temp = 5;
                 } else if (height < dis[7] - 1) {
                     var temp = 6;
-                } else {
+                } else if (height < dis[8] - 1) {
                     var temp = 7;
+                } else {
+                    var temp = 8;
                 }
                 for (var i = 0; i <= temp; ++i) {
-                        $("#pageUlLi" + i).css("color", "#6B81FD");
-                    }
+                    $("#pageUlLi" + i).css("color", "#6B81FD");
+                }
                 for (var i = temp + 1; i < dis.length; ++i) {
                     $("#pageUlLi" + i).css("color", "#d8d8d8");
                 }
@@ -507,6 +568,9 @@
         }
         document.getElementById("pageUlLi7").onmousedown = function () {
             toPage(7);
+        }
+        document.getElementById("pageUlLi8").onmousedown = function () {
+            toPage(8);
         }
     </script>
 </body>
