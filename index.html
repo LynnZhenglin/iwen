@@ -15,7 +15,7 @@
             padding-bottom: 42.7%;
             position: relative;
         }
-
+/* 
         #font_a {
             position: absolute;
             left: 15%;
@@ -68,7 +68,7 @@
             font-family: Helvetica Neue;
             font-weight: 350;
             color: #4F52CC;
-        }
+        } */
 
         #bk_font {
             position: absolute;
@@ -358,11 +358,11 @@
         <div id="back" style="top:0;left:0%;">
             <img src="./image/main.png" style="width:100%">
         </div>
-        <div id="font_a">IWEN</div>
-        <div id="font_b">An English Reading-focused App</div>
-        <div id="font_c">Commercial Group Work</div>
-        <div id="font_e">- User Experience & User Interface Designer</div>
-        <div id="font_d">2021.04 — ongoing</div>
+        <div id="font_a" style="opacity: 0">IWEN</div>
+        <div id="font_b" style="opacity: 0">An English Reading-focused App</div>
+        <div id="font_c" style="opacity: 0">Commercial Group Work</div>
+        <div id="font_e" style="opacity: 0">- User Experience & User Interface Designer</div>
+        <div id="font_d" style="opacity: 0">2021.04 — ongoing</div>
     </div>
 
     <div id="background1">
@@ -585,6 +585,129 @@
         document.getElementById("pageUlLi8").onmousedown = function () {
             toPage(8);
         }
+
+        var tar1 = {
+            position: "absolute",
+            left: "15%",
+            top: "14vw",
+            "font-size": "2.5vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "600",
+            color: "#4F52CC",
+            opacity: 1
+        };
+
+        $("#font_a").css({
+            position: "absolute",
+            left: "8%",
+            top: "14vw",
+            "font-size": "2.5vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "600",
+            color: "#4F52CC",
+            opacity: 0
+        });
+
+        var tar2 = {
+            position: "absolute",
+            left: "15.15%",
+            top: "17.5vw",
+            "font-size": "1.4vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "350",
+            color: "#4F52CC",
+            opacity: 1
+        };
+
+        $("#font_b").css({
+            position: "absolute",
+            left: "8%",
+            top: "17.5vw",
+            "font-size": "1.4vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "350",
+            color: "#4F52CC",
+            opacity: 0
+        });
+
+        var tar3 = {
+            position: "absolute",
+            left: "15.15%",
+            top: "22.5vw",
+            "font-size": "1.4vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "350",
+            color: "#4F52CC",
+            opacity: 1
+        };
+
+        $("#font_c").css({
+            position: "absolute",
+            left: "15.15%",
+            top: "25vw",
+            "font-size": "1.4vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "350",
+            color: "#4F52CC",
+            opacity: 0
+        });
+
+        var tar5 = {
+            position: "absolute",
+            left: "15.15%",
+            top: "24.2vw",
+            "font-size": "1.1vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "350",
+            color: "#4F52CC",
+            opacity: 1
+        };
+
+        $("#font_e").css({
+            position: "absolute",
+            left: "15.15%",
+            top: "26.7vw",
+            "font-size": "1.1vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "350",
+            color: "#4F52CC",
+            opacity: 0
+        });
+
+        var tar4 = {
+            position: "absolute",
+            left: "15.15%",
+            top: "26.5vw",
+            "font-size": "1.4vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "350",
+            color: "#4F52CC",
+            opacity: 1
+        };
+
+        $("#font_d").css({
+            position: "absolute",
+            left: "15.15%",
+            top: "29vw",
+            "font-size": "1.4vw",
+            "font-family": "Helvetica Neue",
+            "font-weight": "350",
+            color: "#4F52CC",
+            opacity: 0
+        });
+        // sleep(0.5);
+        setTimeout(function () {
+            $("#font_a").animate(tar1, 1500, "linear");
+
+            $("#font_b").animate(tar2, 1500, "linear");
+
+            $("#font_c").animate(tar3, 1500, "linear");
+
+            $("#font_e").animate(tar5, 1500, "linear");
+
+            $("#font_d").animate(tar4, 1500, "linear");
+        }, 1000);
+
     </script>
 </body>
 
