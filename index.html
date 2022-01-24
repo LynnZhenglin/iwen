@@ -365,7 +365,7 @@
         <div id="font_e" style="opacity: 0">- User Experience & User Interface Designer</div>
         <div id="font_d" style="opacity: 0">2021.04 — ongoing</div>
         <div id="pdf" style="opacity: 0">
-            <lord-icon src="https://cdn.lordicon.com/wcjauznf.json" trigger="loop"
+            <lord-icon src="https://cdn.lordicon.com/wcjauznf.json" id="load" trigger=""
                 colors="primary:#4a4a4a,secondary:#4a4a4a" stroke="60"
                 style="width:3.5vw;height:3.5vw;position: absolute;top:0vw;left:1vw;">
             </lord-icon>
@@ -747,6 +747,21 @@
         }, 1000);
 
     </script>
+
+    <script>
+        var pdf = document.getElementById("pdf");
+
+        pdf.onmouseover = function () {
+            var load = document.getElementById("load");
+            load.setAttribute("trigger", "loop");
+        }
+
+        pdf.onmouseout = function () {
+            var load = document.getElementById("load");
+            load.setAttribute("trigger", "hover");
+        }
+    </script>
+
 </body>
 
 </html>
