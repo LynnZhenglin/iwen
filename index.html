@@ -249,7 +249,7 @@
             width: 100%;
             height: 0;
             padding: 0;
-            padding-bottom: 31%;
+            padding-bottom: 36vw;
             position: relative;
             background: url('./image/page3/di.png') repeat;
             background-size: 100% auto;
@@ -285,7 +285,7 @@
             width: 100%;
             height: 0;
             padding: 0;
-            padding-bottom: 52%;
+            padding-bottom: 54.5%;
             position: relative;
             background: url('./image/page3/di.png') repeat;
             background-size: 100% auto;
@@ -349,6 +349,16 @@
         #pageUl {
             position: fixed;
             right: 25px;
+        }
+
+        #line {
+            border: 1px dashed #4a4a4a;
+            height: 0;
+            width: 80vw;
+            left:10vw;
+            position:absolute;
+            opacity: 0.5;
+            top: 10vw;
         }
     </style>
 </head>
@@ -461,6 +471,7 @@
         <div id="homepage1">
             <img src="./image/page3/wireframe1.png" style="width:70vw">
         </div>
+        <div id="line" style="top:35.5vw"></div>
     </div>
 
     <div id="background7">
@@ -471,7 +482,7 @@
         <div id="user_font">
             User interface Design
         </div>
-
+        <div id="line" style="top:54vw"></div>
     </div>
 
     <div id="background8">
@@ -530,6 +541,7 @@
                 for (var i = 1; i < obj.length; i++) {
                     dis.push(obj[i].getBoundingClientRect().top - temp);
                 }
+                $("#background8").css("padding-bottom", screenHeight);
             });
         }
 
